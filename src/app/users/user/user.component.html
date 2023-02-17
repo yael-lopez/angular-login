@@ -1,0 +1,40 @@
+<mat-sidenav-container fullscreen>
+
+    <mat-sidenav #sidenav mode="push">
+
+        <mat-toolbar>
+            <span>Menú</span>
+            <button mat-icon-button
+                (click)="sidenav.toggle()">
+                <mat-icon>menu</mat-icon>
+            </button>
+        </mat-toolbar>
+
+        <mat-nav-list>
+            <a mat-list-item (click)="sidenav.toggle()">
+                <mat-icon mat-list-icon>home</mat-icon>
+                <span>Home</span>
+            </a>
+        </mat-nav-list>
+
+    </mat-sidenav>
+
+    
+
+    <mat-toolbar>
+        <button mat-icon-button
+            (click)="sidenav.toggle()">
+            <mat-icon>menu</mat-icon>
+        </button>
+
+        <button mat-icon-button (click)="logout()">
+            Logout
+        </button>
+        <p style="margin-left: 100px;">
+            Bienvenido {{ user }}
+        </p>
+    </mat-toolbar>
+
+    <h1>Home Usuario</h1>
+
+</mat-sidenav-container>

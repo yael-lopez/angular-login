@@ -1,0 +1,24 @@
+<div class="container">
+    <h1>Formulario Login</h1>
+</div>
+<div class="container">
+  <form class="example-form" (ngSubmit)="login(miFormulario)" #miFormulario="ngForm">
+    <mat-form-field class="example-full-width">
+      <mat-label>Usuario</mat-label>
+      <input matInput placeholder="Usuario" ngModel name="usuario" />
+    </mat-form-field>
+
+    <mat-form-field class="example-full-width">
+      <mat-label>Password</mat-label>
+      <input matInput placeholder="Password" ngModel name="password" type="password" />
+    </mat-form-field>
+    <mat-grid-list cols="2" rowHeight="2:1">
+      <mat-grid-tile>
+        <button mat-stroked-button color="accent">Login</button>
+      </mat-grid-tile>
+      <mat-grid-tile>
+        <a routerLink="/registro">Registrate</a>
+      </mat-grid-tile>
+    </mat-grid-list>
+  </form>
+</div>
