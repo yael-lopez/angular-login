@@ -23,6 +23,10 @@ const routes: Routes = [
     component: UserComponent
   },
   {
+    path: 'curso',
+    loadChildren: () => import('./curso/curso-module.module').then( m => m.CursoModuleModule )
+  },
+  {
     path: '**',
     redirectTo: 'login'
   }

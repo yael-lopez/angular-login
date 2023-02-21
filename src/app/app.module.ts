@@ -13,6 +13,8 @@ import { AdminComponent } from './users/admin/admin.component';
 import { UserComponent } from './users/user/user.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { MaterialModule } from './material/material.module';
+import { CrearComponent } from './curso/crear/crear.component';
+import { ListarComponent } from './curso/listar/listar.component';
 
 @NgModule({
   declarations: [
@@ -20,7 +22,9 @@ import { MaterialModule } from './material/material.module';
     LoginComponent,
     RegistroComponent,
     AdminComponent,
-    UserComponent
+    UserComponent,
+    CrearComponent,
+    ListarComponent
   ],
   imports: [
     BrowserModule,

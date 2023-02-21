@@ -1,0 +1,26 @@
+<button mat-raised-button color="accent" routerLink="/curso/agregar">Agregar</button>
+<table>
+    <tr>
+        <td>Nombre</td>
+        <td>Fecha Inicio</td>
+        <td>Fecha Fin</td>
+        <td>Duración</td>
+        <td>Costo</td>
+        <td>Acciones</td>
+    </tr>
+    <tr *ngFor="let curso of cursos">
+        <td>{{ curso.nombre }}</td>
+        <td>{{ curso.inicio }}</td>
+        <td>{{ curso.fin }}</td>
+        <td>{{ curso.hora }}</td>
+        <td>${{ curso.costo }}</td>
+        <td>
+            <button (click)="borrar(curso.id)" mat-fab color="accent" aria-label="Example icon button with a delete icon">
+                <mat-icon>delete</mat-icon>
+            </button>
+            <a routerLink="/curso/editar/{{curso.id}}"  mat-fab color="accent" aria-label="Example icon button with a delete icon">
+                <mat-icon>edit</mat-icon>
+            </a>
+        </td>
+    </tr>
+</table>

@@ -1,0 +1,66 @@
+<button mat-raised-button color="accent" routerLink="/curso/listado">Volver</button>
+<div class="container">
+    <h1>Agregar Curso</h1>
+</div>
+<div class="container">
+    <form
+      class="example-form"
+      (ngSubmit)="guardar(miFormulario)"
+      #miFormulario="ngForm"
+    >
+      <mat-form-field class="example-full-width">
+        <mat-label>Nombre</mat-label>
+        <input matInput placeholder="Nombre" ngModel name="nombre" />
+      </mat-form-field>
+  
+      <mat-form-field class="example-full-width">
+        <mat-label>Fecha Inicio</mat-label>
+        <input
+          matInput
+          ngModel
+          name="inicio"
+          type="date"
+        />
+      </mat-form-field>
+  
+      <mat-form-field class="example-full-width">
+        <mat-label>Fecha Fin</mat-label>
+        <input
+          matInput
+          ngModel
+          name="fin"
+          type="date"
+        />
+      </mat-form-field>
+
+      <mat-form-field class="example-full-width">
+        <mat-label>Horas (Duración)</mat-label>
+        <input
+          matInput
+          placeholder="Horas(Duración)"
+          ngModel
+          name="horas"
+          type="number"
+        />
+      </mat-form-field>
+
+      <mat-form-field class="example-full-width">
+        <mat-label>Costo</mat-label>
+        <input
+          matInput
+          placeholder="Costo"
+          ngModel
+          name="costo"
+          type="number"
+          step="any"
+        />
+      </mat-form-field>
+  
+      <mat-grid-list cols="2" rowHeight="2:1">
+        <mat-grid-tile>
+          <button mat-stroked-button color="accent">Registro</button>
+        </mat-grid-tile>
+      </mat-grid-list>
+  
+    </form>
+  </div>
